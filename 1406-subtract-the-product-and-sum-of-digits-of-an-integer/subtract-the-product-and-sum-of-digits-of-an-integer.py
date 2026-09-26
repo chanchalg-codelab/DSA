@@ -1,13 +1,12 @@
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
-        temp = n
-        sum_=0
-        product=1
+       mul = 1
+       add = 0
 
-        while temp>0:
-            r=temp%10
-            temp//=10
-            sum_+=r
-            product*=r
+       while n>0:
+        place = n%10
+        mul = mul*place
+        add = add+place
+        n //= 10
 
-        return product-sum_
+       return (mul-add)
