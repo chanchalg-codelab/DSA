@@ -1,17 +1,16 @@
 class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        temp = x
-        rev = 0
+    def isPalindrome(self, x):
+        
+        original = x
+        reverse = 0
 
-        while temp>0:
-            r = temp%10 
-            temp//=10
-            rev = rev*10 + r
+        while x > 0:
+            r = x % 10
+            reverse = reverse * 10 + r
+            x //= 10
 
-        if rev==x:
+        if reverse == original:
             return True
         else:
             return False
-
-        return ans
         
