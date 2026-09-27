@@ -7,10 +7,12 @@ class Solution:
         for num in nums:
             if num==1:
                 count+=1
+                if count > maximum:
+                    maximum = count
 
-                maximum=max(count,maximum)
-            
-            else:
+            elif num==0:
                 count = 0
 
         return maximum
+
+           
